@@ -3,5 +3,6 @@
     <pages>
         <page name='Character is a Number'/>
         <page name='Checking Multiple of a Number'/>
+        <page name='Unicode Scalar Properties'/>
     </pages>
 </playground>

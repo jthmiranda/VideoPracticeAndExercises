@@ -6,5 +6,6 @@
         <page name='Unicode Scalar Properties'/>
         <page name='Custom String Interpolation'/>
         <page name='Flattering Neseted Optionals'/>
+        <page name='Dynamic Enums'/>
     </pages>
 </playground>

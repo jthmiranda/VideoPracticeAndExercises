@@ -5,5 +5,6 @@
         <page name='Checking Multiple of a Number'/>
         <page name='Unicode Scalar Properties'/>
         <page name='Custom String Interpolation'/>
+        <page name='Flattering Neseted Optionals'/>
     </pages>
 </playground>

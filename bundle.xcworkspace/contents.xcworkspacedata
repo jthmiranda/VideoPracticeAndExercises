@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Randogs/Randogs.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:swfit-5-new-features.playground">
    </FileRef>
 </Workspace>

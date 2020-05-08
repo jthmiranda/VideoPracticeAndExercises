@@ -7,5 +7,6 @@
         <page name='Custom String Interpolation'/>
         <page name='Flattering Neseted Optionals'/>
         <page name='Dynamic Enums'/>
+        <page name='New page'/>
     </pages>
 </playground>

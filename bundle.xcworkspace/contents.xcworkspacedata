@@ -4,4 +4,7 @@
    <FileRef
       location = "group:swfit-5-new-features.playground">
    </FileRef>
+   <FileRef
+      location = "group:Randog/Randog.xcodeproj">
+   </FileRef>
 </Workspace>

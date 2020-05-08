@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		348C38B32465F8ED009CF928 /* BreedsListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348C38B22465F8ED009CF928 /* BreedsListResponse.swift */; };
 		3491B9032465C133003D7E94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3491B9022465C133003D7E94 /* AppDelegate.swift */; };
 		3491B9052465C133003D7E94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3491B9042465C133003D7E94 /* SceneDelegate.swift */; };
 		3491B9072465C133003D7E94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3491B9062465C133003D7E94 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		348C38B22465F8ED009CF928 /* BreedsListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListResponse.swift; sourceTree = "<group>"; };
 		3491B8FF2465C133003D7E94 /* Randogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Randogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3491B9022465C133003D7E94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3491B9042465C133003D7E94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				3491B9192465C7A5003D7E94 /* DogAPI.swift */,
 				3491B91B2465C8E6003D7E94 /* DogImage.swift */,
+				348C38B22465F8ED009CF928 /* BreedsListResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				3491B9072465C133003D7E94 /* ViewController.swift in Sources */,
 				3491B91C2465C8E6003D7E94 /* DogImage.swift in Sources */,
 				3491B9032465C133003D7E94 /* AppDelegate.swift in Sources */,
+				348C38B32465F8ED009CF928 /* BreedsListResponse.swift in Sources */,
 				3491B9052465C133003D7E94 /* SceneDelegate.swift in Sources */,
 				3491B91A2465C7A5003D7E94 /* DogAPI.swift in Sources */,
 			);

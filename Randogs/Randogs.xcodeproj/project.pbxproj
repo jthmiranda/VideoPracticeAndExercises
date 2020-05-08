@@ -13,6 +13,8 @@
 		3491B90A2465C133003D7E94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3491B9082465C133003D7E94 /* Main.storyboard */; };
 		3491B90C2465C135003D7E94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3491B90B2465C135003D7E94 /* Assets.xcassets */; };
 		3491B90F2465C135003D7E94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3491B90D2465C135003D7E94 /* LaunchScreen.storyboard */; };
+		3491B91A2465C7A5003D7E94 /* DogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3491B9192465C7A5003D7E94 /* DogAPI.swift */; };
+		3491B91C2465C8E6003D7E94 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3491B91B2465C8E6003D7E94 /* DogImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		3491B90B2465C135003D7E94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3491B90E2465C135003D7E94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3491B9102465C135003D7E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3491B9192465C7A5003D7E94 /* DogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogAPI.swift; sourceTree = "<group>"; };
+		3491B91B2465C8E6003D7E94 /* DogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 		3491B9182465C56F003D7E94 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3491B9192465C7A5003D7E94 /* DogAPI.swift */,
+				3491B91B2465C8E6003D7E94 /* DogImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,8 +169,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3491B9072465C133003D7E94 /* ViewController.swift in Sources */,
+				3491B91C2465C8E6003D7E94 /* DogImage.swift in Sources */,
 				3491B9032465C133003D7E94 /* AppDelegate.swift in Sources */,
 				3491B9052465C133003D7E94 /* SceneDelegate.swift in Sources */,
+				3491B91A2465C7A5003D7E94 /* DogAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

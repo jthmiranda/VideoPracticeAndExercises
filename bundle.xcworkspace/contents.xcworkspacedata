@@ -7,4 +7,7 @@
    <FileRef
       location = "group:swfit-5-new-features.playground">
    </FileRef>
+   <FileRef
+      location = "group:Mooskine/Mooskine.xcodeproj">
+   </FileRef>
 </Workspace>

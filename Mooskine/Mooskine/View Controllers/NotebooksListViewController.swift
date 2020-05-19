@@ -18,11 +18,7 @@ class NotebooksListViewController: UIViewController, UITableViewDataSource {
     
     var dataController: DataController!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationItem.titleView = UIImageView(image: #imageLiteral(resourceName: "toolbar-cow"))
-        navigationItem.rightBarButtonItem = editButtonItem
-        
+    fileprivate func loadingNotebooks() {
         let fetchRequest: NSFetchRequest<Notebook> = Notebook.fetchRequest()
         let sortDescription = NSSortDescriptor(key: "creationDate", ascending: false)
         fetchRequest.sortDescriptors = [sortDescription]
@@ -30,6 +26,14 @@ class NotebooksListViewController: UIViewController, UITableViewDataSource {
             notebooks = result
             tableView.reloadData()
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.titleView = UIImageView(image: #imageLiteral(resourceName: "toolbar-cow"))
+        navigationItem.rightBarButtonItem = editButtonItem
+        
+        loadingNotebooks()
         
         updateEditButtonState()
     }

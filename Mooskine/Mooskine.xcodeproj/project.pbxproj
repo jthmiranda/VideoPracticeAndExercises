@@ -24,6 +24,7 @@
 		34B02128246CBFCC009A0805 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B02127246CBFCC009A0805 /* DataController.swift */; };
 		34B848A624787EC200FE5C63 /* UpdateToAttributedStrings.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 34B848A524787EC200FE5C63 /* UpdateToAttributedStrings.xcmappingmodel */; };
 		34B848A824787F8F00FE5C63 /* UpdateToAttributedStringsPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B848A724787F8F00FE5C63 /* UpdateToAttributedStringsPolicy.swift */; };
+		34B848AA247991EF00FE5C63 /* Pathifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B848A9247991EF00FE5C63 /* Pathifier.swift */; };
 		A76557E71F8BC1FB00EFF9B8 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A76557E51F8BC1AC00EFF9B8 /* OpenSans-Bold.ttf */; };
 		A76557E81F8BC1FB00EFF9B8 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A76557E61F8BC1AC00EFF9B8 /* OpenSans-Regular.ttf */; };
 		A76557E91F8BC1FB00EFF9B8 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A76557E41F8BC1AC00EFF9B8 /* OpenSans-Semibold.ttf */; };
@@ -62,6 +63,7 @@
 		34B848A42478769800FE5C63 /* Mooskine-2020-06-22-attributedstring.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Mooskine-2020-06-22-attributedstring.xcdatamodel"; sourceTree = "<group>"; };
 		34B848A524787EC200FE5C63 /* UpdateToAttributedStrings.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = UpdateToAttributedStrings.xcmappingmodel; sourceTree = "<group>"; };
 		34B848A724787F8F00FE5C63 /* UpdateToAttributedStringsPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateToAttributedStringsPolicy.swift; sourceTree = "<group>"; };
+		34B848A9247991EF00FE5C63 /* Pathifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pathifier.swift; sourceTree = "<group>"; };
 		A76557E41F8BC1AC00EFF9B8 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		A76557E51F8BC1AC00EFF9B8 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		A76557E61F8BC1AC00EFF9B8 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				34B02127246CBFCC009A0805 /* DataController.swift */,
 				34B848A524787EC200FE5C63 /* UpdateToAttributedStrings.xcmappingmodel */,
 				34B848A724787F8F00FE5C63 /* UpdateToAttributedStringsPolicy.swift */,
+				34B848A9247991EF00FE5C63 /* Pathifier.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,7 +256,7 @@
 				TargetAttributes = {
 					039B10571EDC5469002EA94F = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 8RNGB2AAZL;
+						DevelopmentTeam = 9VQ88X3US5;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
@@ -321,6 +324,7 @@
 				34B02128246CBFCC009A0805 /* DataController.swift in Sources */,
 				03B2699C1F2F8AA100C7433C /* NoteDetailsViewController.swift in Sources */,
 				341035482473010400DE6690 /* Note+Extensions.swift in Sources */,
+				34B848AA247991EF00FE5C63 /* Pathifier.swift in Sources */,
 				03B269A01F2F8AAD00C7433C /* Cell.swift in Sources */,
 				34B848A824787F8F00FE5C63 /* UpdateToAttributedStringsPolicy.swift in Sources */,
 				03B2699D1F2F8AA100C7433C /* NotesListViewController.swift in Sources */,
@@ -486,7 +490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8RNGB2AAZL;
+				DEVELOPMENT_TEAM = 9VQ88X3US5;
 				INFOPLIST_FILE = Mooskine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -500,7 +504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8RNGB2AAZL;
+				DEVELOPMENT_TEAM = 9VQ88X3US5;
 				INFOPLIST_FILE = Mooskine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

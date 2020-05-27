@@ -170,11 +170,6 @@ extension NoteDetailsViewController {
             backgrountNote.attributedText = newText
             try? backgroundContext.save()
         }
-        
-        
-        
-//        textView.attributedText = newText
-//        textView.selectedRange = NSMakeRange(selectedRange.location, 1)
     }
 
     // MARK: Helper methods for actions

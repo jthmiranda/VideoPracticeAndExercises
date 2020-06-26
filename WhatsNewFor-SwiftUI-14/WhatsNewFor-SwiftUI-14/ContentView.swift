@@ -7,12 +7,27 @@
 
 import SwiftUI
 
-
-struct ContentView: View {
-    @State private var bgColor = Color.white
+struct SampleRow: View {
+    var id: Int
     
     var body: some View {
-        ColorPicker("Set the background color", selection: $bgColor)
+        Text("Row \(id)")
+    }
+    
+    init(id: Int) {
+        print("Loading row \(id)")
+        self.id = id
+    }
+}
+
+struct ContentView: View {
+    
+    var body: some View {
+        ScrollView {
+            LazyVStack {
+                ForEach(1...1000, id: \.self, content: SampleRow.init)
+            }
+        }
     }
 }
 

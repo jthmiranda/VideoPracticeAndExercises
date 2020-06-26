@@ -8,18 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    let data = Array(1...10000).map { "Item \($0)" }
+    let data = 1...10
     
-    let column = [
-        GridItem(.fixed(100)),
-        GridItem(.flexible())
+    let rows = [
+        GridItem(.fixed(200))
     ]
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: column, spacing: 20) {
+        ScrollView(.horizontal) {
+            LazyHGrid(rows: rows, alignment: .center) {
                 ForEach(data, id: \.self) { item in
-                    Text(item)
+                    Text("Heading\(item)")
                 }
             }
             .padding(.horizontal)

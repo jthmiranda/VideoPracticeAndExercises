@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var editorText = "Some text to edit"
+    let data = Array(1...10000).map { "Item \($0)" }
+    
+    let column = [
+        GridItem(.fixed(100)),
+        GridItem(.flexible())
+    ]
     
     var body: some View {
-        NavigationView {
-            TextEditor(text: $editorText)
-                .font(.title)
-                .foregroundColor(.green)
+        ScrollView {
+            LazyVGrid(columns: column, spacing: 20) {
+                ForEach(data, id: \.self) { item in
+                    Text(item)
+                }
+            }
+            .padding(.horizontal)
         }
     }
 }

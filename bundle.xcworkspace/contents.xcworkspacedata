@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:WhatsNewFor-SwiftUI-14/WhatsNewFor-SwiftUI-14.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Randogs/Randogs.xcodeproj">
    </FileRef>
    <FileRef

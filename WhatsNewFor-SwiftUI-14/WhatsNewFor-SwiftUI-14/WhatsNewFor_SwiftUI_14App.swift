@@ -11,7 +11,15 @@ import SwiftUI
 struct WhatsNewFor_SwiftUI_14App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                ContentView()
+                ContentView()
+                ContentView()
+                ContentView()
+                ContentView()
+            }
+            .tabViewStyle(PageTabViewStyle())
+            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
         }
     }
 }

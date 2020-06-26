@@ -6,14 +6,13 @@
 //
 
 import SwiftUI
-import MapKit
 
 struct ContentView: View {
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 13.689, longitude: -89.187), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
     
     var body: some View {
-        Map(coordinateRegion: $region)
-            .edgesIgnoringSafeArea(.all)
+        Text("ejemplo ")
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.black)
     }
 }
 

@@ -6,23 +6,14 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
-    let data = 1...10
-    
-    let rows = [
-        GridItem(.fixed(200))
-    ]
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 13.689, longitude: -89.187), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
     
     var body: some View {
-        ScrollView(.horizontal) {
-            LazyHGrid(rows: rows, alignment: .center) {
-                ForEach(data, id: \.self) { item in
-                    Text("Heading\(item)")
-                }
-            }
-            .padding(.horizontal)
-        }
+        Map(coordinateRegion: $region)
+            .edgesIgnoringSafeArea(.all)
     }
 }
 

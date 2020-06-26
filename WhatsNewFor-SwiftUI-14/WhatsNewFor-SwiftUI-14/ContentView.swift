@@ -6,15 +6,20 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct ContentView: View {
-    @State private var downloadValue = 0.0
     
     var body: some View {
-        VStack {
-            ProgressView("Downloading", value: downloadValue, total: 100)
-            Button("Increment download") {
-                if (downloadValue < 100) { downloadValue += 10}
+        VideoPlayer(player: AVPlayer(url: URL(string: "https://bit.ly/swswift")!)) {
+            VStack {
+                Text("Watermark")
+                    .font(.caption)
+                    .foregroundColor(.white)
+                    .background(Color.black)
+                    .clipShape(Capsule())
+                
+                Spacer()
             }
         }
     }

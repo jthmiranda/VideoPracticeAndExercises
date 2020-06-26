@@ -7,25 +7,14 @@
 
 import SwiftUI
 
-struct SampleRow: View {
-    var id: Int
-    
-    var body: some View {
-        Text("Row \(id)")
-    }
-    
-    init(id: Int) {
-        print("Loading row \(id)")
-        self.id = id
-    }
-}
-
 struct ContentView: View {
+    @State private var downloadValue = 0.0
     
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                ForEach(1...1000, id: \.self, content: SampleRow.init)
+        VStack {
+            ProgressView("Downloading", value: downloadValue, total: 100)
+            Button("Increment download") {
+                if (downloadValue < 100) { downloadValue += 10}
             }
         }
     }

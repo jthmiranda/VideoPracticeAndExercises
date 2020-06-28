@@ -8,21 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.openURL) var openURL
+    @State private var birthday = Date()
 
     var body: some View {
         VStack {
-            Link(destination: URL(string: "https://www.udacity.com")!) {
-                Text("Visit Apple")
-            }
-            .padding(.all, 10)
+            Text("Select your birthday")
+                .font(.largeTitle)
             
-            Button("another link") {
-                openURL(URL(string: "http://www.apple.com")!)
-            }
-            .padding(.all, 10)
-            .background(Color.gray.opacity(0.2))
-            .clipShape(Capsule())
+            DatePicker("Select your birthday", selection: $birthday)
+                .datePickerStyle(GraphicalDatePickerStyle())
+                .labelsHidden()
+                .frame(maxHeight: 400)
+                
+            
         }
     }
 }

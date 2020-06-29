@@ -8,20 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var birthday = Date()
+    @State private var showTerm = false
 
     var body: some View {
-        VStack {
-            Text("Select your birthday")
-                .font(.largeTitle)
+        DisclosureGroup("Show terms", isExpanded: $showTerm) {
+            Text("Long terms and conditions Long terms and conditions Long terms and conditions Long terms and conditions Long terms and conditions Long terms and conditions Long terms and conditions Long terms and conditions Long terms and conditions ")
             
-            DatePicker("Select your birthday", selection: $birthday)
-                .datePickerStyle(GraphicalDatePickerStyle())
-                .labelsHidden()
-                .frame(maxHeight: 400)
-                
-            
+            Button("Hide terms") {
+                showTerm.toggle()
+            }
         }
+        .padding(.all, 10)
     }
 }
 

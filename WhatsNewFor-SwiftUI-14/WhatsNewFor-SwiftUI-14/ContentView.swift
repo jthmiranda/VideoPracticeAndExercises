@@ -8,17 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var showTerm = false
 
     var body: some View {
-        DisclosureGroup("Show terms", isExpanded: $showTerm) {
-            Text("Long terms and conditions Long terms and conditions Long terms and conditions Long terms and conditions Long terms and conditions Long terms and conditions Long terms and conditions Long terms and conditions Long terms and conditions ")
-            
-            Button("Hide terms") {
-                showTerm.toggle()
-            }
+        NavigationView {
+            Text("Hello World!").padding()
+                .navigationBarTitle("SwiftUI")
+                .toolbar {
+                    ToolbarItem {
+                        HStack {
+                            Button("Tab One") {
+                                print("tapped!")
+                            }
+                            
+                            Button("Tab Two") {
+                                print("tapped!")
+                            }
+                        }
+                    }
+                }
         }
-        .padding(.all, 10)
+        
     }
 }
 

@@ -6,45 +6,41 @@
 //
 
 import SwiftUI
+import UniformTypeIdentifiers
 
-struct SideBar: View {
+struct FileText: FileDocument {
+    static var readableContentTypes = [UTType.plainText]
     
-    var body: some View {
-        List(1..<100) { i in
-            Text("Row \(i)")
+    var text = ""
+    
+    init(initialText: String = "") {
+        text = initialText
+    }
+    
+    init(fileWrapper: FileWrapper, contentType: UTType) throws {
+        if let data = fileWrapper.regularFileContents{
+            text = String(decoding: data, as: UTF8.self)
         }
-        .listStyle(SidebarListStyle())
+    }
+    
+    func write(to fileWrapper: inout FileWrapper, contentType: UTType) throws {
+        let data = Data(text.utf8)
+        fileWrapper = FileWrapper(regularFileWithContents: data)
     }
 }
 
-struct PrimaryView: View {
-    
-    var body: some View {
-        Text("Primary view")
-    }
-}
 
-struct DetailView: View {
-    
-    var body: some View {
-        Text("Detail view")
-    }
-}
 struct ContentView: View {
-   
+    @Binding var document: FileText
 
     var body: some View {
-        NavigationView {
-            SideBar()
-            PrimaryView()
-            DetailView()
-        }
+        TextEditor(text: $document.text)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     
     static var previews: some View {
-        ContentView()
+        ContentView(document: .constant(FileText()))
     }
 }

@@ -6,41 +6,43 @@
 //
 
 import SwiftUI
-import UniformTypeIdentifiers
-
-struct FileText: FileDocument {
-    static var readableContentTypes = [UTType.plainText]
-    
-    var text = ""
-    
-    init(initialText: String = "") {
-        text = initialText
-    }
-    
-    init(fileWrapper: FileWrapper, contentType: UTType) throws {
-        if let data = fileWrapper.regularFileContents{
-            text = String(decoding: data, as: UTF8.self)
-        }
-    }
-    
-    func write(to fileWrapper: inout FileWrapper, contentType: UTType) throws {
-        let data = Data(text.utf8)
-        fileWrapper = FileWrapper(regularFileWithContents: data)
-    }
-}
 
 
 struct ContentView: View {
-    @Binding var document: FileText
-
+    @Namespace private var animation
+    @State private var isFlipped = false
+    
     var body: some View {
-        TextEditor(text: $document.text)
+        VStack {
+            if isFlipped {
+                Circle()
+                    .fill(Color.red)
+                    .frame(width: 44, height: 44)
+                    .matchedGeometryEffect(id: "Shape", in: animation)
+                Text("Taylor Swift - 1989")
+                    .font(.headline)
+                    .matchedGeometryEffect(id: "Album", in: animation)
+            } else {
+                Text("Taylor Swift - 1989")
+                    .font(.headline)
+                    .matchedGeometryEffect(id: "Album", in: animation)
+                Circle()
+                    .fill(Color.red)
+                    .frame(width: 44, height: 44)
+                    .matchedGeometryEffect(id: "Shape", in: animation)
+            }
+        }
+        .onTapGesture {
+            withAnimation {
+                isFlipped.toggle()
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     
     static var previews: some View {
-        ContentView(document: .constant(FileText()))
+        ContentView()
     }
 }

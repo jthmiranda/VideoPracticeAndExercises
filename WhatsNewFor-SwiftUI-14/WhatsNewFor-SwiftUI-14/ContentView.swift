@@ -10,20 +10,10 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        VStack(spacing: 20) {
-            Text(Date()...Date().addingTimeInterval(6800))
-            
-            Text(Date().addingTimeInterval(6800), style: .time)
-            
-            Text(Date().addingTimeInterval(6800), style: .time)
-            
-            Text(Date().addingTimeInterval(6800), style: .relative)
-            
-            Text(Date().addingTimeInterval(6800), style: .offset)
-            
-            Text(Date().addingTimeInterval(6800), style: .timer)
+        List(0..<100) { i in
+            Text("Row \(i)")
         }
-        .font(.title)
+        .listStyle(InsetGroupedListStyle())
         
     }
 }

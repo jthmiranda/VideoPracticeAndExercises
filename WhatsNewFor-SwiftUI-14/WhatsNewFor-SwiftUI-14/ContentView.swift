@@ -7,30 +7,24 @@
 
 import SwiftUI
 
-struct FullScreenModalView: View {
-    @Environment(\.presentationMode) var presentationMode
-    
-    var body: some View {
-        VStack {
-            Text("This is a modal View")
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.red)
-        .edgesIgnoringSafeArea(.all)
-        .onTapGesture {
-            presentationMode.wrappedValue.dismiss()
-        }
-    }
-}
-
 struct ContentView: View {
-    @State private var isPresented = false
     
     var body: some View {
-        Button("Present!") {
-            isPresented.toggle()
+        VStack(spacing: 20) {
+            Text(Date()...Date().addingTimeInterval(6800))
+            
+            Text(Date().addingTimeInterval(6800), style: .time)
+            
+            Text(Date().addingTimeInterval(6800), style: .time)
+            
+            Text(Date().addingTimeInterval(6800), style: .relative)
+            
+            Text(Date().addingTimeInterval(6800), style: .offset)
+            
+            Text(Date().addingTimeInterval(6800), style: .timer)
         }
-        .fullScreenCover(isPresented: $isPresented, content: FullScreenModalView.init)
+        .font(.title)
+        
     }
 }
 

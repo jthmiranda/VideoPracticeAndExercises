@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var name = ""
     
     var body: some View {
-        List(0..<100) { i in
-            Text("Row \(i)")
-        }
-        .listStyle(InsetGroupedListStyle())
-        
+        TextField("Your name is :", text: $name)
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .padding(.all, 10)
+            .onChange(of: name) { value in
+                print("name has changed to: \(value)")
+            }
     }
 }
 

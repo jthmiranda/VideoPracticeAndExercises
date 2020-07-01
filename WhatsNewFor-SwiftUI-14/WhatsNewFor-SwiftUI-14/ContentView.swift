@@ -7,27 +7,30 @@
 
 import SwiftUI
 
-
-struct ContentView: View {
-    let colors: [Color] = [.red, .green, .blue]
+struct FullScreenModalView: View {
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        ScrollView {
-            ScrollViewReader { reader in
-                Button("scroll to 8") {
-                    withAnimation {
-                        reader.scrollTo(8, anchor: .center)
-                    }
-                }
-                
-                ForEach(1..<10, id:\.self) { i in
-                    Text("Row \(i)")
-                        .frame(width: 300, height: 300)
-                        .background(colors[i % colors.count])
-                        .id(i)
-                }
-            }
+        VStack {
+            Text("This is a modal View")
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.red)
+        .edgesIgnoringSafeArea(.all)
+        .onTapGesture {
+            presentationMode.wrappedValue.dismiss()
+        }
+    }
+}
+
+struct ContentView: View {
+    @State private var isPresented = false
+    
+    var body: some View {
+        Button("Present!") {
+            isPresented.toggle()
+        }
+        .fullScreenCover(isPresented: $isPresented, content: FullScreenModalView.init)
     }
 }
 

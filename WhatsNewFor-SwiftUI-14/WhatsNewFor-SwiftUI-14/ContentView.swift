@@ -9,15 +9,13 @@ import SwiftUI
 import StoreKit
 
 struct ContentView: View {
-    @State private var showingRecommeded = false
+    @State private var name = "Jonathan"
     
     var body: some View {
-        Button("Show recommedation") {
-            showingRecommeded.toggle()
-        }
-        .appStoreOverlay(isPresented: $showingRecommeded) {
-            SKOverlay.AppConfiguration(appIdentifier: "2334", position: .bottom)
-        }
+        TextField("What is your name: ", text: $name)
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .textCase(.uppercase)
+            .padding()
     }
 }
 

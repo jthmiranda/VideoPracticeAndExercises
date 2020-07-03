@@ -6,17 +6,18 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct ContentView: View {
-    @State private var name = ""
+    @State private var showingRecommeded = false
     
     var body: some View {
-        TextField("Your name is :", text: $name)
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            .padding(.all, 10)
-            .onChange(of: name) { value in
-                print("name has changed to: \(value)")
-            }
+        Button("Show recommedation") {
+            showingRecommeded.toggle()
+        }
+        .appStoreOverlay(isPresented: $showingRecommeded) {
+            SKOverlay.AppConfiguration(appIdentifier: "2334", position: .bottom)
+        }
     }
 }
 

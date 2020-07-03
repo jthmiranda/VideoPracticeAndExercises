@@ -9,13 +9,16 @@ import SwiftUI
 import StoreKit
 
 struct ContentView: View {
-    @State private var name = "Jonathan"
+    @AppStorage("username") private var username: String = "Anonimo"
     
     var body: some View {
-        TextField("What is your name: ", text: $name)
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            .textCase(.uppercase)
-            .padding()
+        VStack {
+            Text("Wellcome \(username)")
+            
+            Button("Log in") {
+                username = "jthmiranda"
+            }
+        }
     }
 }
 

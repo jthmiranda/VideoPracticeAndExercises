@@ -8,13 +8,15 @@
 import SwiftUI
 import StoreKit
 
+class User: ObservableObject {
+    var username = "jthmiranda"
+}
+
 struct ContentView: View {
-    @ScaledMetric private var imageSize: CGFloat = 100
+    @StateObject var user = User()
     
     var body: some View {
-        Image(systemName: "cloud.bolt.fill")
-            .resizable()
-            .frame(width: imageSize, height: imageSize)
+        Text("Username: \(user.username)")
     }
 }
 

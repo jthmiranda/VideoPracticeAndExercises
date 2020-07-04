@@ -6,17 +6,20 @@
 //
 
 import SwiftUI
-import StoreKit
 
-class User: ObservableObject {
-    var username = "jthmiranda"
+class AppDelegate: NSObject, UIApplicationDelegate {
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        print("your code here")
+        return true
+    }
 }
 
 struct ContentView: View {
-    @StateObject var user = User()
+    
     
     var body: some View {
-        Text("Username: \(user.username)")
+        Text("Hello World")
     }
 }
 

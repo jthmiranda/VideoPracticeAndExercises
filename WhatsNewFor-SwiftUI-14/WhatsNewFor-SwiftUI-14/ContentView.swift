@@ -9,16 +9,12 @@ import SwiftUI
 import StoreKit
 
 struct ContentView: View {
-    @AppStorage("username") private var username: String = "Anonimo"
+    @ScaledMetric private var imageSize: CGFloat = 100
     
     var body: some View {
-        VStack {
-            Text("Wellcome \(username)")
-            
-            Button("Log in") {
-                username = "jthmiranda"
-            }
-        }
+        Image(systemName: "cloud.bolt.fill")
+            .resizable()
+            .frame(width: imageSize, height: imageSize)
     }
 }
 
